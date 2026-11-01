@@ -1,0 +1,218 @@
+/* Enciclopedia de la Herencia Cultural Cubana */
+:root {
+  color-scheme: light;
+  --ink: #202b36;
+  --muted: #5d6873;
+  --accent: #174a70;
+  --accent-soft: #eaf1f6;
+  --line: #9aabba;
+  --paper: #ffffff;
+  --page: #f3f5f7;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  padding: 42px 22px;
+  background: var(--page);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 21px;
+  line-height: 1.8;
+}
+
+.article {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 56px 70px 76px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 12px 38px rgba(25, 42, 58, .08);
+}
+
+.titlepage {
+  margin: 0 0 40px;
+  padding: 0 0 30px;
+  border-bottom: 2px solid var(--accent);
+}
+
+.titlepage h2.title {
+  margin: 0;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(36px, 4.5vw, 50px);
+  font-weight: 700;
+  line-height: 1.18;
+}
+
+.titlepage h3.subtitle {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 26px;
+  font-weight: normal;
+}
+
+.titlepage hr { display: none; }
+
+.toc {
+  margin: 0 0 40px;
+  padding: 24px 28px;
+  background: #f7f9fb;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.toc p {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.toc dl { margin: 0; }
+.toc dt { margin: 7px 0; }
+.toc a { font-size: 20px; }
+
+.article > p:first-of-type {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 21px;
+}
+
+.article > p:nth-of-type(2) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0 0 44px;
+}
+
+.article > p:nth-of-type(2) a {
+  display: inline-flex;
+  min-width: 58px;
+  min-height: 58px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 17px;
+  background: var(--accent-soft);
+  border: 1px solid #cbd9e4;
+  border-radius: 7px;
+  color: var(--accent);
+  font-size: 27px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background .15s ease, color .15s ease;
+}
+
+.article > p:nth-of-type(2) a:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.section {
+  margin: 0 0 36px;
+  padding: 0 0 30px;
+  border-bottom: 1px solid var(--line);
+}
+
+.section .section {
+  margin: 22px 0 28px;
+  padding: 0 0 24px;
+  border: 0;
+  border-bottom: 3px solid var(--line);
+}
+
+.section h2.title {
+  margin: 0 0 20px;
+  padding: 0 0 12px;
+  color: var(--accent);
+  border-bottom: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 36px;
+  line-height: 1.25;
+}
+
+.section h2.title a { color: inherit; }
+
+.section p {
+  margin: 14px 0;
+  font-size: 21px;
+  line-height: 1.8;
+}
+
+.section p a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.section p a:hover { text-decoration: underline; }
+
+.mediaobject { margin: 18px 22px 16px 0; }
+
+.mediaobject img {
+  display: block;
+  width: auto;
+  max-width: min(100%, 260px);
+  max-height: 260px;
+  object-fit: contain;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+  padding: 5px;
+}
+
+a { color: var(--accent); }
+
+a:focus-visible {
+  outline: 3px solid #e0a52b;
+  outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+  body { padding: 12px; font-size: 19px; }
+  .article { padding: 30px 22px 42px; border-radius: 8px; }
+  .titlepage h2.title { font-size: 34px; }
+  .titlepage h3.subtitle { font-size: 22px; }
+  .section h2.title { font-size: 30px; }
+  .section p { font-size: 19px; }
+  .toc { padding: 18px; }
+}
+
+
+/* Los títulos de cada entrada y número no llevan líneas debajo. */
+.section h2.title {
+  border-bottom: none;
+}
+
+
+/* Keep the blue rule only under the main article title, not section titles. */
+.section > .titlepage {
+  margin: 0 0 20px;
+  padding: 0;
+  border-bottom: 0;
+}
+
+.section h2.title {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Eliminar separadores dentro de la tabla de contenido */
+.toc .section {
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: inline !important;
+}
+
+.toc dt {
+  border: none !important;
+  margin: 7px 0 !important;
+  padding: 0 !important;
+}
