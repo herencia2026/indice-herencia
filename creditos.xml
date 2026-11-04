@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+
+<article id="creditos-enciclopedia">
+  <title>Autoría y créditos</title>
+
+  <section>
+    <title>Creación y desarrollo</title>
+    <para>Daniel Motola-Pedroso</para>
+  </section>
+
+  <section>
+    <title>Editorial</title>
+    <para>Pedroso Publishing Company LLC</para>
+  </section>
+
+  <section>
+    <title>Edición y producción digital</title>
+    <para>
+      Desarrollo, organización editorial y producción
+      digital de la Enciclopedia de la Herencia Cultural Cubana.
+    </para>
+  </section>
+
+  <section>
+    <title>Derechos de autor</title>
+    <para>© 2026 Pedroso Publishing Company LLC. Todos los derechos reservados.</para>
+  </section>
+</article>

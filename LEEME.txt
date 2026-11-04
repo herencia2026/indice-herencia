@@ -1,0 +1,13 @@
+ARCHIVOS XML CORREGIDOS Y GENERACIÓN HTML UTF-8
+
+Los XML están guardados en UTF-8. Se añadió la declaración XML y el DOCTYPE DocBook 4.5 que faltaban en creditos.xml.
+
+El problema de los acentos estaba en que la hoja XSL de DocBook genera HTML ISO-8859-1. El script generar_html.sh convierte correctamente esos bytes a UTF-8 y actualiza la declaración charset del HTML.
+
+Uso:
+1. Copia estos XML y generar_html.sh a la carpeta del proyecto donde está style.css.
+2. Desde esa carpeta ejecuta: bash generar_html.sh
+3. Comprueba: file -bi *.html
+4. Los cinco HTML generados deben indicar charset=utf-8.
+
+Requiere xsltproc, iconv y la hoja DocBook XSL instalada en la ruta indicada en el script.

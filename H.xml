@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<article id="letra-h">
+  <title>H</title>
+  <para>Entradas que comienzan con la letra H.</para>
+
+  <section id="herencia-cultural-cubana">
+    <title>Herencia Cultural Cubana</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/herencia-cultural-cubana.jpg"
+                   width="220px"/>
+      </imageobject>
+    </mediaobject>
+    <para>Organización sin fines de lucro dedicada a preservar y difundir la cultura cubana.</para>
+  </section>
+
+  <section id="herencia-magazine">
+    <title>Herencia Magazine</title>
+    <para>Véase <ulink url="R.html#revista-herencia">Revista Herencia</ulink>.</para>
+  </section>
+
+  <para><ulink url="index.html">Volver al índice alfabético</ulink></para>
+</article>
